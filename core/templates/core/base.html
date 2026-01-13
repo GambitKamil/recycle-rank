@@ -1,28 +1,47 @@
 <!doctype html>
-<html>
+{% load i18n %}
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
-    <meta charset="utf-8">
-    <title>Recycle Rank</title>
+    <meta charset="UTF-8">
+    <title>{% trans "Recycle Rank" %}</title>
 </head>
 <body>
-    <nav>
-        <a href="/dashboard/">Dashboard</a> |
-        <a href="/leaderboard/">Leaderboard</a> |
-        <a href="/faculties/">Faculties</a> |
 
+<nav style="margin-bottom: 15px;">
+    <a href="/dashboard/">{% trans "Dashboard" %}</a> |
+    <a href="/leaderboard/">{% trans "Leaderboard" %}</a> |
+    <a href="/faculties/">{% trans "Faculties" %}</a> |
 
-        {% if user.is_authenticated %}
-            <form method="post" action="/logout/" style="display:inline;">
-                {% csrf_token %}
-                <button type="submit">Logout</button>
-            </form>
-        {% else %}
-            <a href="/login/">Login</a> |
-            <a href="/register/">Register</a>
-        {% endif %}
-    </nav>
-    <hr>
+    {% if user.is_authenticated %}
+        <form method="post" action="/logout/" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">{% trans "Logout" %}</button>
+        </form>
+    {% else %}
+        <a href="/login/">{% trans "Login" %}</a> |
+        <a href="/register/">{% trans "Register" %}</a>
+    {% endif %}
 
-    {% block content %}{% endblock %}
+    <!-- 🔤 Переключатель языка -->
+    {% get_current_language as CURRENT_LANGUAGE %}
+    <form action="{% url 'set_language' %}" method="post" style="display:inline; margin-left: 20px;">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <select name="language" onchange="this.form.submit()">
+            <option value="tr" {% if CURRENT_LANGUAGE == "tr" %}selected{% endif %}>Türkçe</option>
+            <option value="ru" {% if CURRENT_LANGUAGE == "ru" %}selected{% endif %}>Русский</option>
+            <option value="en" {% if CURRENT_LANGUAGE == "en" %}selected{% endif %}>English</option>
+    </select>
+</form>
+
+</nav>
+
+<hr>
+
+<!-- Основной контент страницы -->
+{% block content %}
+{% endblock %}
+
 </body>
 </html>
+

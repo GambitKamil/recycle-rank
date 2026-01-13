@@ -1,12 +1,14 @@
 {% extends "core/base.html" %}
+{% load i18n %}
 {% block content %}
-<h2>Add sorting record</h2>
+<h2>{% trans "Add sorting record" %}</h2>
 
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Save</button>
+    <button type="submit">{% trans "Save" %}</button>
 </form>
 
-<p><a href="/dashboard/">Back to dashboard</a></p>
+<p><a href="/dashboard/">{% trans "Back to dashboard" %}</a></p>
 {% endblock %}
+
