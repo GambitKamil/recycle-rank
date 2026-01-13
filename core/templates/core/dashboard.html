@@ -1,0 +1,62 @@
+{% extends "core/base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+
+<p><b>Student ID:</b> {{ profile.student_id }}</p>
+<p><b>Faculty:</b> {{ profile.faculty.name }}</p>
+
+<hr>
+
+<h3>Totals</h3>
+<p><b>Total sorted:</b> {{ total_kg }} kg</p>
+<p><b>Eco-score:</b> {{ eco_score }}</p>
+
+<h3>Impact (demo)</h3>
+<p>CO₂ saved (demo): {{ co2_saved }}</p>
+<p>Energy saved (demo): {{ energy_saved }} kWh</p>
+<p style="font-size: 12px; opacity: 0.7;">
+    These impact numbers are demonstration values (educational project).
+</p>
+
+<hr>
+
+<p><a href="/add/">+ Add new record</a></p>
+
+<h3>By category</h3>
+<table border="1" cellpadding="6">
+    <tr>
+        <th>Category</th>
+        <th>Total (kg)</th>
+        <th>Eco-score</th>
+    </tr>
+    {% for r in per_cat %}
+    <tr>
+        <td>{{ r.category }}</td>
+        <td>{{ r.kg }}</td>
+        <td>{{ r.score }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3">No records yet</td></tr>
+    {% endfor %}
+</table>
+
+<hr>
+
+<h3>Last records</h3>
+<table border="1" cellpadding="6">
+    <tr>
+        <th>Date</th>
+        <th>Category</th>
+        <th>Weight (kg)</th>
+    </tr>
+    {% for e in entries %}
+    <tr>
+        <td>{{ e.created_at }}</td>
+        <td>{{ e.get_category_display }}</td>
+        <td>{{ e.weight_kg }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3">No records yet</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
