@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 13:19+0300\n"
+"POT-Creation-Date: 2026-01-14 14:31+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Student ID"
 msgstr "Номер студента:"
 
-#: .\core\forms.py:33 .\core\templates\core\leaderboard_faculties.html:19
+#: .\core\forms.py:33 .\core\templates\core\leaderboard_faculties.html:22
 msgid "Faculty"
 msgstr "Факультет"
 
@@ -81,6 +81,30 @@ msgstr "например, 1,5"
 msgid "Weight must be between 0.10 and 50.00 kg."
 msgstr "Вес должен быть от 0,10 до 50,00 кг."
 
+#: .\core\models.py:28
+msgid "Plastic"
+msgstr "Пластик"
+
+#: .\core\models.py:29
+msgid "Paper"
+msgstr "Бумага"
+
+#: .\core\models.py:30
+msgid "Glass"
+msgstr "Стекло"
+
+#: .\core\models.py:31
+msgid "Metal"
+msgstr "Металл"
+
+#: .\core\models.py:32
+msgid "Organic"
+msgstr "Органика"
+
+#: .\core\models.py:33
+msgid "Electronic"
+msgstr "Электроника"
+
 #: .\core\templates\core\add_entry.html:9
 msgid "Add sorting record"
 msgstr "Добавить запись сортировки"
@@ -93,38 +117,39 @@ msgstr "Сохранить"
 msgid "Back to dashboard"
 msgstr "Вернуться к панели управления"
 
-#: .\core\templates\core\base.html:7 .\core\templates\core\base.html:17
-#: .\core\templates\core\base.html:54
+#: .\core\templates\core\base.html:7 .\core\templates\core\base.html:41
+#: .\core\templates\core\base.html:116
 msgid "Recycle Rank"
 msgstr "Рейтинг переработки"
 
-#: .\core\templates\core\base.html:20 .\core\templates\core\dashboard.html:7
+#: .\core\templates\core\base.html:57 .\core\templates\core\dashboard.html:7
+#: .\core\templates\core\leaderboard_students.html:11
 msgid "Dashboard"
 msgstr "Панель Управления"
 
-#: .\core\templates\core\base.html:21
+#: .\core\templates\core\base.html:61
 msgid "Leaderboard"
 msgstr "Таблица лидеров"
 
-#: .\core\templates\core\base.html:22
+#: .\core\templates\core\base.html:65
 msgid "Faculties"
 msgstr "Факультеты"
 
-#: .\core\templates\core\base.html:27
+#: .\core\templates\core\base.html:71
 msgid "Logout"
 msgstr "Выйти"
 
-#: .\core\templates\core\base.html:30 .\core\templates\core\login.html:9
+#: .\core\templates\core\base.html:79 .\core\templates\core\login.html:9
 #: .\core\templates\core\login.html:27
 msgid "Login"
 msgstr "Войти"
 
-#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:33
+#: .\core\templates\core\base.html:83 .\core\templates\core\login.html:33
 #: .\core\templates\core\register.html:9
 msgid "Register"
 msgstr "Регистрация"
 
-#: .\core\templates\core\base.html:54
+#: .\core\templates\core\base.html:116
 msgid "University demo project"
 msgstr ""
 
@@ -165,14 +190,14 @@ msgid "By category"
 msgstr "По категории"
 
 #: .\core\templates\core\dashboard.html:56
-#: .\core\templates\core\leaderboard_faculties.html:20
-#: .\core\templates\core\leaderboard_students.html:20
+#: .\core\templates\core\leaderboard_faculties.html:23
+#: .\core\templates\core\leaderboard_students.html:23
 msgid "Total (kg)"
 msgstr "Всего (кг)"
 
 #: .\core\templates\core\dashboard.html:57
-#: .\core\templates\core\leaderboard_faculties.html:21
-#: .\core\templates\core\leaderboard_students.html:21
+#: .\core\templates\core\leaderboard_faculties.html:24
+#: .\core\templates\core\leaderboard_students.html:24
 msgid "Eco-score"
 msgstr "Экологический балл:"
 
@@ -203,8 +228,14 @@ msgstr "Рейтинг факультетов"
 msgid "Top faculties by total recycling results."
 msgstr "Лучшие факультеты по общим результатам переработки отходов."
 
-#: .\core\templates\core\leaderboard_faculties.html:36
-#: .\core\templates\core\leaderboard_students.html:36
+#: .\core\templates\core\leaderboard_faculties.html:11
+#, fuzzy
+#| msgid "Student"
+msgid "Students"
+msgstr "Студент"
+
+#: .\core\templates\core\leaderboard_faculties.html:58
+#: .\core\templates\core\leaderboard_students.html:58
 msgid "No data"
 msgstr "Нет данных"
 
@@ -216,7 +247,7 @@ msgstr "Рейтинг Студентов"
 msgid "Top students by eco-score and total kg."
 msgstr "Лучшие студенты по общим результатам переработки отходов."
 
-#: .\core\templates\core\leaderboard_students.html:19
+#: .\core\templates\core\leaderboard_students.html:22
 msgid "Student"
 msgstr "Студент"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 13:19+0300\n"
+"POT-Creation-Date: 2026-01-14 14:31+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Student ID"
 msgstr "Öğrenci NO:"
 
-#: .\core\forms.py:33 .\core\templates\core\leaderboard_faculties.html:19
+#: .\core\forms.py:33 .\core\templates\core\leaderboard_faculties.html:22
 msgid "Faculty"
 msgstr "Fakülte"
 
@@ -79,6 +79,30 @@ msgstr "ö.g., 1,5"
 msgid "Weight must be between 0.10 and 50.00 kg."
 msgstr "Ağırlık 0,10 ile 50,00 kg arasında olmalıdır."
 
+#: .\core\models.py:28
+msgid "Plastic"
+msgstr "Plastik"
+
+#: .\core\models.py:29
+msgid "Paper"
+msgstr "Kağıt"
+
+#: .\core\models.py:30
+msgid "Glass"
+msgstr "Cam"
+
+#: .\core\models.py:31
+msgid "Metal"
+msgstr "Metal"
+
+#: .\core\models.py:32
+msgid "Organic"
+msgstr "Organik"
+
+#: .\core\models.py:33
+msgid "Electronic"
+msgstr "Elektronik"
+
 #: .\core\templates\core\add_entry.html:9
 msgid "Add sorting record"
 msgstr "Sıralama kaydı ekle"
@@ -91,38 +115,39 @@ msgstr "Kaydet"
 msgid "Back to dashboard"
 msgstr "Kontrol paneline geri dön"
 
-#: .\core\templates\core\base.html:7 .\core\templates\core\base.html:17
-#: .\core\templates\core\base.html:54
+#: .\core\templates\core\base.html:7 .\core\templates\core\base.html:41
+#: .\core\templates\core\base.html:116
 msgid "Recycle Rank"
 msgstr "Geri Dönüşüm Sıralaması"
 
-#: .\core\templates\core\base.html:20 .\core\templates\core\dashboard.html:7
+#: .\core\templates\core\base.html:57 .\core\templates\core\dashboard.html:7
+#: .\core\templates\core\leaderboard_students.html:11
 msgid "Dashboard"
 msgstr "Kontrol Paneli"
 
-#: .\core\templates\core\base.html:21
+#: .\core\templates\core\base.html:61
 msgid "Leaderboard"
 msgstr "Sıralama"
 
-#: .\core\templates\core\base.html:22
+#: .\core\templates\core\base.html:65
 msgid "Faculties"
 msgstr "Fakülteler"
 
-#: .\core\templates\core\base.html:27
+#: .\core\templates\core\base.html:71
 msgid "Logout"
 msgstr "Çıkış"
 
-#: .\core\templates\core\base.html:30 .\core\templates\core\login.html:9
+#: .\core\templates\core\base.html:79 .\core\templates\core\login.html:9
 #: .\core\templates\core\login.html:27
 msgid "Login"
 msgstr "Giriş"
 
-#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:33
+#: .\core\templates\core\base.html:83 .\core\templates\core\login.html:33
 #: .\core\templates\core\register.html:9
 msgid "Register"
 msgstr "Kayıt Ol"
 
-#: .\core\templates\core\base.html:54
+#: .\core\templates\core\base.html:116
 msgid "University demo project"
 msgstr "Üniversite demo projesi"
 
@@ -163,14 +188,14 @@ msgid "By category"
 msgstr "Kategorilere göre"
 
 #: .\core\templates\core\dashboard.html:56
-#: .\core\templates\core\leaderboard_faculties.html:20
-#: .\core\templates\core\leaderboard_students.html:20
+#: .\core\templates\core\leaderboard_faculties.html:23
+#: .\core\templates\core\leaderboard_students.html:23
 msgid "Total (kg)"
 msgstr "Toplam (kg)"
 
 #: .\core\templates\core\dashboard.html:57
-#: .\core\templates\core\leaderboard_faculties.html:21
-#: .\core\templates\core\leaderboard_students.html:21
+#: .\core\templates\core\leaderboard_faculties.html:24
+#: .\core\templates\core\leaderboard_students.html:24
 msgid "Eco-score"
 msgstr "Eko puan"
 
@@ -199,8 +224,14 @@ msgstr "Fakülte sıralamsı"
 msgid "Top faculties by total recycling results."
 msgstr "Toplam geri dönüşüm sonuçlarına göre en iyi fakülteler"
 
-#: .\core\templates\core\leaderboard_faculties.html:36
-#: .\core\templates\core\leaderboard_students.html:36
+#: .\core\templates\core\leaderboard_faculties.html:11
+#, fuzzy
+#| msgid "Student"
+msgid "Students"
+msgstr "Öğrenci"
+
+#: .\core\templates\core\leaderboard_faculties.html:58
+#: .\core\templates\core\leaderboard_students.html:58
 msgid "No data"
 msgstr "Veri yok"
 
@@ -212,7 +243,7 @@ msgstr "Öğrenci sıralaması"
 msgid "Top students by eco-score and total kg."
 msgstr "Eko puan ve toplam kg'ye göre en iyi öğrenciler."
 
-#: .\core\templates\core\leaderboard_students.html:19
+#: .\core\templates\core\leaderboard_students.html:22
 msgid "Student"
 msgstr "Öğrenci"
 

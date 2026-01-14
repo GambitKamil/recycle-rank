@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 from django.conf import settings
 from django.db import models
+from django.utils.translation import gettext_lazy as _
+
 
 
 class Faculty(models.Model):
@@ -22,20 +24,21 @@ class Profile(models.Model):
 
 
 class WasteEntry(models.Model):
-    class Category(models.TextChoices):
-        PLASTIC = "plastic", "Plastic"
-        PAPER = "paper", "Paper"
-        GLASS = "glass", "Glass"
-        METAL = "metal", "Metal"
-        ORGANIC = "organic", "Organic"
-        EWASTE = "ewaste", "E-waste"
+    CATEGORY_CHOICES = [
+        ("plastic", _("Plastic")),
+        ("paper", _("Paper")),
+        ("glass", _("Glass")),
+        ("metal", _("Metal")),
+        ("organic", _("Organic")),
+        ("electronic", _("Electronic")),
+    ]
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name="waste_entries",
     )
-    category = models.CharField(max_length=20, choices=Category.choices)
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
     weight_kg = models.DecimalField(max_digits=6, decimal_places=2)  # 0.01..999.99
     created_at = models.DateTimeField(auto_now_add=True)
 
