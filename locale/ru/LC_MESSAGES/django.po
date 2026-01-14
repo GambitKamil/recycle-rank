@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 15:00+0300\n"
+"POT-Creation-Date: 2026-01-14 15:14+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,64 +20,68 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\core\forms.py:32 .\core\forms.py:66
+#: .\core\forms.py:35 .\core\forms.py:74
 #, fuzzy
 #| msgid "Student ID:"
 msgid "Student ID"
 msgstr "Номер студента:"
 
-#: .\core\forms.py:33 .\core\templates\core\leaderboard_faculties.html:22
+#: .\core\forms.py:36 .\core\templates\core\leaderboard_faculties.html:22
 msgid "Faculty"
 msgstr "Факультет"
 
-#: .\core\forms.py:34 .\core\forms.py:72
+#: .\core\forms.py:37 .\core\forms.py:80
 msgid "Password"
 msgstr "Пароль"
 
-#: .\core\forms.py:35
+#: .\core\forms.py:38
 msgid "Repeat password"
 msgstr "Повторите пароль"
 
-#: .\core\forms.py:42
+#: .\core\forms.py:45
 msgid "9 digits"
 msgstr "9 цифр"
 
-#: .\core\forms.py:43
+#: .\core\forms.py:46
 msgid "Create a password"
 msgstr "Создать пароль"
 
-#: .\core\forms.py:44
+#: .\core\forms.py:47
 msgid "Repeat the password"
 msgstr "Повторите пароль"
 
-#: .\core\forms.py:49
+#: .\core\forms.py:53
 msgid "Student ID must be exactly 9 digits."
 msgstr "Идентификационный номер студента должен состоять ровно из 9 цифр."
 
-#: .\core\forms.py:57
+#: .\core\forms.py:56
+msgid "This Student ID is already registered."
+msgstr "Этот номер студента уже зарегистрирован."
+
+#: .\core\forms.py:65
 msgid "Passwords do not match."
 msgstr "Пароли не совпадают."
 
-#: .\core\forms.py:71
+#: .\core\forms.py:79
 #, fuzzy
 #| msgid "Student ID:"
 msgid "Student ID (9 digits)"
 msgstr "Номер студента:"
 
-#: .\core\forms.py:80 .\core\templates\core\dashboard.html:55
+#: .\core\forms.py:88 .\core\templates\core\dashboard.html:55
 #: .\core\templates\core\dashboard.html:90
 msgid "Category"
 msgstr "Категория"
 
-#: .\core\forms.py:81 .\core\templates\core\dashboard.html:91
+#: .\core\forms.py:89 .\core\templates\core\dashboard.html:91
 msgid "Weight (kg)"
 msgstr "Вес (кг)"
 
-#: .\core\forms.py:87
+#: .\core\forms.py:95
 msgid "e.g., 1.5"
 msgstr "например, 1,5"
 
-#: .\core\forms.py:92
+#: .\core\forms.py:100
 msgid "Weight must be between 0.10 and 50.00 kg."
 msgstr "Вес должен быть от 0,10 до 50,00 кг."
 

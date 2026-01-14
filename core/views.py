@@ -11,6 +11,8 @@ from .services import coef
 from django.contrib.auth.models import User
 from .models import Faculty
 from django.contrib.auth.models import User
+from django.db import IntegrityError
+from django.utils.translation import gettext as _
 
 
 from .forms import RegisterForm, WasteEntryForm
@@ -188,4 +190,6 @@ def leaderboard_faculties_view(request):
         "core/leaderboard_faculties.html",
         {"rows": data},
     )
+
+
 

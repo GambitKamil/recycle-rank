@@ -1,5 +1,8 @@
 import re
 from decimal import Decimal
+from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import User
 
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
@@ -45,8 +48,13 @@ class RegisterForm(BootstrapMixin, forms.Form):
 
     def clean_student_id(self):
         student_id = self.cleaned_data["student_id"].strip()
+
         if not re.fullmatch(r"\d{9}", student_id):
             raise forms.ValidationError(_("Student ID must be exactly 9 digits."))
+
+        if User.objects.filter(username=student_id).exists():
+            raise forms.ValidationError(_("This Student ID is already registered."))
+
         return student_id
 
     def clean(self):
