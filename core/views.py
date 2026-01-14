@@ -10,6 +10,8 @@ from django.db.models import Sum
 from .services import coef
 from django.contrib.auth.models import User
 from .models import Faculty
+from django.contrib.auth.models import User
+
 
 from .forms import RegisterForm, WasteEntryForm
 from .models import Profile, WasteEntry
@@ -115,7 +117,7 @@ from django.contrib.auth.models import User
 def leaderboard_students_view(request):
     users = (
         User.objects
-        .select_related()
+        .filter(profile__isnull=False, is_staff=False, is_superuser=False)
         .all()
     )
 
