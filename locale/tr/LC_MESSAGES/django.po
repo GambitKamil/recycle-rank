@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 01:46+0300\n"
+"POT-Creation-Date: 2026-01-14 12:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,155 +17,168 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\core\templates\core\add_entry.html:4
+
+#: .\core\templates\core\add_entry.html:9
 msgid "Add sorting record"
 msgstr "Sıralama kaydı ekle"
 
-#: .\core\templates\core\add_entry.html:9
+#: .\core\templates\core\add_entry.html:14
 msgid "Save"
 msgstr "Kaydet"
 
-#: .\core\templates\core\add_entry.html:12
+#: .\core\templates\core\add_entry.html:18
 msgid "Back to dashboard"
 msgstr "Kontrol paneline geri dön"
 
-#: .\core\templates\core\base.html:6
+#: .\core\templates\core\base.html:7 .\core\templates\core\base.html:17
+#: .\core\templates\core\base.html:54
 msgid "Recycle Rank"
 msgstr "Geri Dönüşüm Sıralaması"
 
-#: .\core\templates\core\base.html:11 .\core\templates\core\dashboard.html:4
+#: .\core\templates\core\base.html:20 .\core\templates\core\dashboard.html:7
 msgid "Dashboard"
 msgstr "Kontrol Paneli"
 
-#: .\core\templates\core\base.html:12
+#: .\core\templates\core\base.html:21
 msgid "Leaderboard"
 msgstr "Sıralama"
 
-#: .\core\templates\core\base.html:13
+#: .\core\templates\core\base.html:22
 msgid "Faculties"
 msgstr "Fakülteler"
 
-#: .\core\templates\core\base.html:18
+#: .\core\templates\core\base.html:27
 msgid "Logout"
 msgstr "Çıkış"
 
-#: .\core\templates\core\base.html:21 .\core\templates\core\login.html:4
-#: .\core\templates\core\login.html:9
+#: .\core\templates\core\base.html:30 .\core\templates\core\login.html:9
+#: .\core\templates\core\login.html:14
 msgid "Login"
 msgstr "Giriş"
 
-#: .\core\templates\core\base.html:22 .\core\templates\core\login.html:14
-#: .\core\templates\core\register.html:4
+#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:19
+#: .\core\templates\core\register.html:9
 msgid "Register"
 msgstr "Kayıt Ol"
 
-#: .\core\templates\core\dashboard.html:6
+#: .\core\templates\core\base.html:54
+msgid "University demo project"
+msgstr "Üniversite demo projesi"
+
+#: .\core\templates\core\dashboard.html:9
 msgid "Student ID:"
 msgstr "Öğrenci NO:"
 
-#: .\core\templates\core\dashboard.html:7
+#: .\core\templates\core\dashboard.html:10
 msgid "Faculty:"
 msgstr "Fakülte"
 
-#: .\core\templates\core\dashboard.html:11
-msgid "Totals"
-msgstr "Toplamlar"
-
-#: .\core\templates\core\dashboard.html:12
-msgid "Total sorted:"
-msgstr "Toplam ayrıştırılan:"
-
 #: .\core\templates\core\dashboard.html:13
-msgid "Eco-score:"
-msgstr "Eko puan:"
-
-#: .\core\templates\core\dashboard.html:15
-msgid "Impact (demo)"
-msgstr "Etki (demo)"
-
-#: .\core\templates\core\dashboard.html:16
-msgid "CO₂ saved (demo):"
-msgstr "CO₂ tasarrufu (demo):"
-
-#: .\core\templates\core\dashboard.html:17
-msgid "Energy saved (demo):"
-msgstr "Enerji tasarrufu (demo):"
-
-#: .\core\templates\core\dashboard.html:20
-msgid "These impact numbers are demonstration values (educational project)."
-msgstr "Bu etki değerleri örnek amaçlıdır."
-
-#: .\core\templates\core\dashboard.html:25
 msgid "+ Add new record"
 msgstr "+ Yeni kayıt ekle"
 
-#: .\core\templates\core\dashboard.html:27
+#: .\core\templates\core\dashboard.html:20
+msgid "Total sorted:"
+msgstr "Toplam ayrıştırılan:"
+
+#: .\core\templates\core\dashboard.html:28
+msgid "Eco-score:"
+msgstr "Eko puan:"
+
+#: .\core\templates\core\dashboard.html:36
+msgid "Impact (demo)"
+msgstr "Etki (demo)"
+
+#: .\core\templates\core\dashboard.html:38
+msgid "CO₂ saved (demo):"
+msgstr "CO₂ tasarrufu (demo):"
+
+#: .\core\templates\core\dashboard.html:39
+msgid "Energy saved (demo):"
+msgstr "Enerji tasarrufu (demo):"
+
+#: .\core\templates\core\dashboard.html:50
 msgid "By category"
 msgstr "Kategorilere göre"
 
-#: .\core\templates\core\dashboard.html:30
-#: .\core\templates\core\dashboard.html:52
+#: .\core\templates\core\dashboard.html:55
+#: .\core\templates\core\dashboard.html:89
 msgid "Category"
 msgstr "Kategori"
 
-#: .\core\templates\core\dashboard.html:31
-#: .\core\templates\core\leaderboard_faculties.html:10
-#: .\core\templates\core\leaderboard_students.html:10
+#: .\core\templates\core\dashboard.html:56
+#: .\core\templates\core\leaderboard_faculties.html:20
+#: .\core\templates\core\leaderboard_students.html:20
 msgid "Total (kg)"
 msgstr "Toplam (kg)"
 
-#: .\core\templates\core\dashboard.html:32
-#: .\core\templates\core\leaderboard_faculties.html:11
-#: .\core\templates\core\leaderboard_students.html:11
+#: .\core\templates\core\dashboard.html:57
+#: .\core\templates\core\leaderboard_faculties.html:21
+#: .\core\templates\core\leaderboard_students.html:21
 msgid "Eco-score"
 msgstr "Eko puan"
 
-#: .\core\templates\core\dashboard.html:42
-#: .\core\templates\core\dashboard.html:63
+#: .\core\templates\core\dashboard.html:68
+#: .\core\templates\core\dashboard.html:101
 msgid "No records yet"
 msgstr "Henüz kayıt yok"
 
-#: .\core\templates\core\dashboard.html:48
+#: .\core\templates\core\dashboard.html:74
+msgid "These impact numbers are demonstration values (educational project)."
+msgstr "Bu etki değerleri örnek amaçlıdır."
+
+#: .\core\templates\core\dashboard.html:83
 msgid "Last records"
 msgstr "Son kayıtlar"
 
-#: .\core\templates\core\dashboard.html:51
+#: .\core\templates\core\dashboard.html:88
 msgid "Date"
 msgstr "Tarih"
 
-#: .\core\templates\core\dashboard.html:53
+#: .\core\templates\core\dashboard.html:90
 msgid "Weight (kg)"
 msgstr "Ağırlık (kg)"
 
-#: .\core\templates\core\leaderboard_faculties.html:4
+#: .\core\templates\core\leaderboard_faculties.html:7
 msgid "Faculty leaderboard"
-msgstr ""
+msgstr "Fakülte sıralamsı"
 
-#: .\core\templates\core\leaderboard_faculties.html:9
+#: .\core\templates\core\leaderboard_faculties.html:8
+msgid "Top faculties by total recycling results."
+msgstr "Toplam geri dönüşüm sonuçlarına göre en iyi fakülteler"
+
+#: .\core\templates\core\leaderboard_faculties.html:19
 msgid "Faculty"
-msgstr "Fakülte sıralaması"
+msgstr "Fakülte"
 
-#: .\core\templates\core\leaderboard_faculties.html:22
-#: .\core\templates\core\leaderboard_students.html:22
+#: .\core\templates\core\leaderboard_faculties.html:36
+#: .\core\templates\core\leaderboard_students.html:36
 msgid "No data"
 msgstr "Veri yok"
 
-#: .\core\templates\core\leaderboard_students.html:4
+#: .\core\templates\core\leaderboard_students.html:7
 msgid "Student leaderboard"
 msgstr "Öğrenci sıralaması"
 
-#: .\core\templates\core\leaderboard_students.html:9
+#: .\core\templates\core\leaderboard_students.html:8
+msgid "Top students by eco-score and total kg."
+msgstr "Eko puan ve toplam kg'ye göre en iyi öğrenciler."
+
+#: .\core\templates\core\leaderboard_students.html:19
 msgid "Student"
 msgstr "Öğrenci"
 
-#: .\core\templates\core\login.html:13
+#: .\core\templates\core\login.html:18
 msgid "No account?"
 msgstr "Hesabın yok mu?"
 
-#: .\core\templates\core\register.html:9
+#: .\core\templates\core\register.html:14
 msgid "Create account"
 msgstr "Hesap oluştur"
 
-#: .\core\templates\core\register.html:13
+#: .\core\templates\core\register.html:18
 msgid "Back to login"
 msgstr "Giriş sayfasına dön"
+
+#~ msgid "Totals"
+#~ msgstr "Toplamlar"

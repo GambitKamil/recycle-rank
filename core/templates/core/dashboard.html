@@ -1,66 +1,110 @@
 {% extends "core/base.html" %}
 {% load i18n %}
+
 {% block content %}
-<h2>{% trans "Dashboard" %}</h2>
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h2 class="mb-1">{% trans "Dashboard" %}</h2>
+    <div class="text-muted small">
+      {% trans "Student ID:" %} <b>{{ profile.student_id }}</b> •
+      {% trans "Faculty:" %} <b>{{ profile.faculty.name }}</b>
+    </div>
+  </div>
+  <a class="btn btn-success" href="/add/">{% trans "+ Add new record" %}</a>
+</div>
 
-<p><b>{% trans "Student ID:" %}</b> {{ profile.student_id }}</p>
-<p><b>{% trans "Faculty:" %}</b> {{ profile.faculty.name }}</p>
+<div class="row g-3 mb-3">
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="text-muted small">{% trans "Total sorted:" %}</div>
+        <div class="fs-3 fw-bold">{{ total_kg }} <span class="fs-6">kg</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="text-muted small">{% trans "Eco-score:" %}</div>
+        <div class="fs-3 fw-bold">{{ eco_score }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="text-muted small">{% trans "Impact (demo)" %}</div>
+        <div class="small">
+          <div>{% trans "CO₂ saved (demo):" %} <b>{{ co2_saved }}</b></div>
+          <div>{% trans "Energy saved (demo):" %} <b>{{ energy_saved }}</b> kWh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<hr>
+<div class="row g-3">
+  <div class="col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title mb-3">{% trans "By category" %}</h5>
+        <div class="table-responsive">
+          <table class="table table-sm table-striped align-middle">
+            <thead>
+              <tr>
+                <th>{% trans "Category" %}</th>
+                <th class="text-end">{% trans "Total (kg)" %}</th>
+                <th class="text-end">{% trans "Eco-score" %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for r in per_cat %}
+              <tr>
+                <td>{{ r.category }}</td>
+                <td class="text-end">{{ r.kg }}</td>
+                <td class="text-end">{{ r.score }}</td>
+              </tr>
+              {% empty %}
+              <tr><td colspan="3" class="text-muted">{% trans "No records yet" %}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="text-muted small">
+          {% trans "These impact numbers are demonstration values (educational project)." %}
+        </div>
+      </div>
+    </div>
+  </div>
 
-<h3>{% trans "Totals" %}</h3>
-<p><b>{% trans "Total sorted:" %}</b> {{ total_kg }} kg</p>
-<p><b>{% trans "Eco-score:" %}</b> {{ eco_score }}</p>
-
-<h3>{% trans "Impact (demo)" %}</h3>
-<p>{% trans "CO₂ saved (demo):" %} {{ co2_saved }}</p>
-<p>{% trans "Energy saved (demo):" %} {{ energy_saved }} kWh</p>
-
-<p style="font-size: 12px; opacity: 0.7;">
-    {% trans "These impact numbers are demonstration values (educational project)." %}
-</p>
-
-<hr>
-
-<p><a href="/add/">{% trans "+ Add new record" %}</a></p>
-
-<h3>{% trans "By category" %}</h3>
-<table border="1" cellpadding="6">
-    <tr>
-        <th>{% trans "Category" %}</th>
-        <th>{% trans "Total (kg)" %}</th>
-        <th>{% trans "Eco-score" %}</th>
-    </tr>
-
-    {% for r in per_cat %}
-    <tr>
-        <td>{{ r.category }}</td>
-        <td>{{ r.kg }}</td>
-        <td>{{ r.score }}</td>
-    </tr>
-    {% empty %}
-    <tr><td colspan="3">{% trans "No records yet" %}</td></tr>
-    {% endfor %}
-</table>
-
-<hr>
-
-<h3>{% trans "Last records" %}</h3>
-<table border="1" cellpadding="6">
-    <tr>
-        <th>{% trans "Date" %}</th>
-        <th>{% trans "Category" %}</th>
-        <th>{% trans "Weight (kg)" %}</th>
-    </tr>
-
-    {% for e in entries %}
-    <tr>
-        <td>{{ e.created_at }}</td>
-        <td>{{ e.get_category_display }}</td>
-        <td>{{ e.weight_kg }}</td>
-    </tr>
-    {% empty %}
-    <tr><td colspan="3">{% trans "No records yet" %}</td></tr>
-    {% endfor %}
-</table>
+  <div class="col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title mb-3">{% trans "Last records" %}</h5>
+        <div class="table-responsive">
+          <table class="table table-sm table-hover align-middle">
+            <thead>
+              <tr>
+                <th>{% trans "Date" %}</th>
+                <th>{% trans "Category" %}</th>
+                <th class="text-end">{% trans "Weight (kg)" %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for e in entries %}
+              <tr>
+                <td class="small text-muted">{{ e.created_at }}</td>
+                <td>{{ e.get_category_display }}</td>
+                <td class="text-end">{{ e.weight_kg }}</td>
+              </tr>
+              {% empty %}
+              <tr><td colspan="3" class="text-muted">{% trans "No records yet" %}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

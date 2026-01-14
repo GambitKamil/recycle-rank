@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 01:46+0300\n"
+"POT-Creation-Date: 2026-01-14 12:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,155 +19,165 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: .\core\templates\core\add_entry.html:4
-msgid "Add sorting record"
-msgstr ""
 
 #: .\core\templates\core\add_entry.html:9
+msgid "Add sorting record"
+msgstr "Добавить запись сортировки"
+
+#: .\core\templates\core\add_entry.html:14
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
-#: .\core\templates\core\add_entry.html:12
+#: .\core\templates\core\add_entry.html:18
 msgid "Back to dashboard"
-msgstr ""
+msgstr "Вернуться к панели управления"
 
-#: .\core\templates\core\base.html:6
+#: .\core\templates\core\base.html:7 .\core\templates\core\base.html:17
+#: .\core\templates\core\base.html:54
 msgid "Recycle Rank"
-msgstr ""
+msgstr "Рейтинг переработки"
 
-#: .\core\templates\core\base.html:11 .\core\templates\core\dashboard.html:4
+#: .\core\templates\core\base.html:20 .\core\templates\core\dashboard.html:7
 msgid "Dashboard"
-msgstr ""
+msgstr "Панель Управления"
 
-#: .\core\templates\core\base.html:12
+#: .\core\templates\core\base.html:21
 msgid "Leaderboard"
-msgstr ""
+msgstr "Таблица лидеров"
 
-#: .\core\templates\core\base.html:13
+#: .\core\templates\core\base.html:22
 msgid "Faculties"
-msgstr ""
+msgstr "Факультеты"
 
-#: .\core\templates\core\base.html:18
+#: .\core\templates\core\base.html:27
 msgid "Logout"
-msgstr ""
+msgstr "Выйти"
 
-#: .\core\templates\core\base.html:21 .\core\templates\core\login.html:4
-#: .\core\templates\core\login.html:9
+#: .\core\templates\core\base.html:30 .\core\templates\core\login.html:9
+#: .\core\templates\core\login.html:14
 msgid "Login"
-msgstr ""
+msgstr "Войти"
 
-#: .\core\templates\core\base.html:22 .\core\templates\core\login.html:14
-#: .\core\templates\core\register.html:4
+#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:19
+#: .\core\templates\core\register.html:9
 msgid "Register"
+msgstr "Регистрация"
+
+#: .\core\templates\core\base.html:54
+msgid "University demo project"
 msgstr ""
 
-#: .\core\templates\core\dashboard.html:6
+#: .\core\templates\core\dashboard.html:9
 msgid "Student ID:"
-msgstr ""
+msgstr "Номер студента:"
 
-#: .\core\templates\core\dashboard.html:7
+#: .\core\templates\core\dashboard.html:10
 msgid "Faculty:"
-msgstr ""
-
-#: .\core\templates\core\dashboard.html:11
-msgid "Totals"
-msgstr ""
-
-#: .\core\templates\core\dashboard.html:12
-msgid "Total sorted:"
-msgstr ""
+msgstr "Факультет:"
 
 #: .\core\templates\core\dashboard.html:13
-msgid "Eco-score:"
-msgstr ""
-
-#: .\core\templates\core\dashboard.html:15
-msgid "Impact (demo)"
-msgstr ""
-
-#: .\core\templates\core\dashboard.html:16
-msgid "CO₂ saved (demo):"
-msgstr ""
-
-#: .\core\templates\core\dashboard.html:17
-msgid "Energy saved (demo):"
-msgstr ""
+msgid "+ Add new record"
+msgstr "+ Добавить новую запись"
 
 #: .\core\templates\core\dashboard.html:20
-msgid "These impact numbers are demonstration values (educational project)."
-msgstr ""
+msgid "Total sorted:"
+msgstr "Всего отсортировано:"
 
-#: .\core\templates\core\dashboard.html:25
-msgid "+ Add new record"
-msgstr ""
+#: .\core\templates\core\dashboard.html:28
+msgid "Eco-score:"
+msgstr "Экологический балл:"
 
-#: .\core\templates\core\dashboard.html:27
+#: .\core\templates\core\dashboard.html:36
+msgid "Impact (demo)"
+msgstr "Влияние (демонстрация)"
+
+#: .\core\templates\core\dashboard.html:38
+msgid "CO₂ saved (demo):"
+msgstr "Сэкономленный CO₂ (демонстрация):"
+
+#: .\core\templates\core\dashboard.html:39
+msgid "Energy saved (demo):"
+msgstr "Энергосбережение "
+
+#: .\core\templates\core\dashboard.html:50
 msgid "By category"
-msgstr ""
+msgstr "По категории"
 
-#: .\core\templates\core\dashboard.html:30
-#: .\core\templates\core\dashboard.html:52
+#: .\core\templates\core\dashboard.html:55
+#: .\core\templates\core\dashboard.html:89
 msgid "Category"
-msgstr ""
+msgstr "Категория"
 
-#: .\core\templates\core\dashboard.html:31
-#: .\core\templates\core\leaderboard_faculties.html:10
-#: .\core\templates\core\leaderboard_students.html:10
+#: .\core\templates\core\dashboard.html:56
+#: .\core\templates\core\leaderboard_faculties.html:20
+#: .\core\templates\core\leaderboard_students.html:20
 msgid "Total (kg)"
-msgstr ""
+msgstr "Всего (кг)"
 
-#: .\core\templates\core\dashboard.html:32
-#: .\core\templates\core\leaderboard_faculties.html:11
-#: .\core\templates\core\leaderboard_students.html:11
+#: .\core\templates\core\dashboard.html:57
+#: .\core\templates\core\leaderboard_faculties.html:21
+#: .\core\templates\core\leaderboard_students.html:21
 msgid "Eco-score"
-msgstr ""
+msgstr "Экологический балл:"
 
-#: .\core\templates\core\dashboard.html:42
-#: .\core\templates\core\dashboard.html:63
+#: .\core\templates\core\dashboard.html:68
+#: .\core\templates\core\dashboard.html:101
 msgid "No records yet"
-msgstr ""
+msgstr "Пока нет записей"
 
-#: .\core\templates\core\dashboard.html:48
+#: .\core\templates\core\dashboard.html:74
+msgid "These impact numbers are demonstration values (educational project)."
+msgstr "Эти показатели воздействия являются демонстрационными значениями (образовательный проект)."
+
+#: .\core\templates\core\dashboard.html:83
 msgid "Last records"
-msgstr ""
+msgstr "Последние записи"
 
-#: .\core\templates\core\dashboard.html:51
+#: .\core\templates\core\dashboard.html:88
 msgid "Date"
-msgstr ""
+msgstr "Дата"
 
-#: .\core\templates\core\dashboard.html:53
+#: .\core\templates\core\dashboard.html:90
 msgid "Weight (kg)"
-msgstr ""
+msgstr "Вес (кг)"
 
-#: .\core\templates\core\leaderboard_faculties.html:4
+#: .\core\templates\core\leaderboard_faculties.html:7
 msgid "Faculty leaderboard"
-msgstr ""
+msgstr "Рейтинг факультетов"
 
-#: .\core\templates\core\leaderboard_faculties.html:9
+#: .\core\templates\core\leaderboard_faculties.html:8
+msgid "Top faculties by total recycling results."
+msgstr "Лучшие факультеты по общим результатам переработки отходов."
+
+#: .\core\templates\core\leaderboard_faculties.html:19
 msgid "Faculty"
-msgstr ""
+msgstr "Факультет"
 
-#: .\core\templates\core\leaderboard_faculties.html:22
-#: .\core\templates\core\leaderboard_students.html:22
+#: .\core\templates\core\leaderboard_faculties.html:36
+#: .\core\templates\core\leaderboard_students.html:36
 msgid "No data"
-msgstr ""
+msgstr "Нет данных"
 
-#: .\core\templates\core\leaderboard_students.html:4
+#: .\core\templates\core\leaderboard_students.html:7
 msgid "Student leaderboard"
-msgstr ""
+msgstr "Рейтинг Студентов"
 
-#: .\core\templates\core\leaderboard_students.html:9
+#: .\core\templates\core\leaderboard_students.html:8
+msgid "Top students by eco-score and total kg."
+msgstr "Лучшие студенты по общим результатам переработки отходов."
+
+#: .\core\templates\core\leaderboard_students.html:19
 msgid "Student"
-msgstr ""
+msgstr "Студент"
 
-#: .\core\templates\core\login.html:13
+#: .\core\templates\core\login.html:18
 msgid "No account?"
-msgstr ""
+msgstr "Нет аккаунта?"
 
-#: .\core\templates\core\register.html:9
+#: .\core\templates\core\register.html:14
 msgid "Create account"
-msgstr ""
+msgstr "Создать аккаунт"
 
-#: .\core\templates\core\register.html:13
+#: .\core\templates\core\register.html:18
 msgid "Back to login"
-msgstr ""
+msgstr "Вернуться к входу"
