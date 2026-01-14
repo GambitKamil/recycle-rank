@@ -7,25 +7,41 @@
     <title>{% trans "Recycle Rank" %}</title>
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
         body { background-color: #f6f8f7; }
         .navbar-brand { font-weight: 700; }
+
+        /* Smooth hover animation */
+        .card { transition: transform .15s ease, box-shadow .15s ease; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.08) !important; }
+        .table-hover tbody tr { transition: background-color .12s ease; }
+
+        /* Medal badge style */
+        .badge-medal {
+            font-size: .95rem;
+            padding: .35rem .55rem;
+            border-radius: 999px;
+        }
+
         footer { font-size: 14px; color: #777; }
     </style>
 </head>
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container">
 
         <a class="navbar-brand" href="/">
-            {% trans "Geri Dönüşüm Sıralaması" %}
+            <i class="bi bi-recycle"></i> {% trans "Recycle Rank" %}
         </a>
 
-        <!-- ✅ ВОТ ЭТОЙ КНОПКИ НЕ ХВАТАЛО -->
+        <!-- Toggler (so menu doesn't disappear on small screens) -->
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                 aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,21 +54,21 @@
                 {% if user.is_authenticated %}
 
                     <a class="btn btn-outline-light btn-sm" href="/dashboard/">
-                        {% trans "Dashboard" %}
+                        <i class="bi bi-speedometer2"></i> {% trans "Dashboard" %}
                     </a>
 
                     <a class="btn btn-outline-light btn-sm" href="/leaderboard/">
-                        {% trans "Leaderboard" %}
+                        <i class="bi bi-trophy"></i> {% trans "Leaderboard" %}
                     </a>
 
                     <a class="btn btn-outline-light btn-sm" href="/faculties/">
-                        {% trans "Faculties" %}
+                        <i class="bi bi-buildings"></i> {% trans "Faculties" %}
                     </a>
 
                     <form method="post" action="/logout/" class="d-inline">
                         {% csrf_token %}
                         <button class="btn btn-light btn-sm">
-                            {% trans "Logout" %}
+                            <i class="bi bi-box-arrow-right"></i> {% trans "Logout" %}
                         </button>
                     </form>
 
@@ -60,16 +76,17 @@
 
                     {% if request.path != '/login/' and request.path != '/register/' %}
                         <a class="btn btn-light btn-sm" href="/login/">
-                            {% trans "Login" %}
+                            <i class="bi bi-box-arrow-in-right"></i> {% trans "Login" %}
                         </a>
+
                         <a class="btn btn-warning btn-sm" href="/register/">
-                            {% trans "Register" %}
+                            <i class="bi bi-person-plus"></i> {% trans "Register" %}
                         </a>
                     {% endif %}
 
                 {% endif %}
 
-                <!-- ✅ Язык снова на месте -->
+                <!-- Language switcher (always visible) -->
                 {% get_current_language as CURRENT_LANGUAGE %}
                 <form action="{% url 'set_language' %}" method="post" class="ms-2">
                     {% csrf_token %}
@@ -89,15 +106,17 @@
     </div>
 </nav>
 
+<!-- ================= CONTENT ================= -->
 <div class="container py-4">
     {% block content %}{% endblock %}
 </div>
 
+<!-- ================= FOOTER ================= -->
 <footer class="text-center py-3">
     © {% trans "Recycle Rank" %} — {% trans "University demo project" %}
 </footer>
 
-<!-- ✅ ВОТ ЭТОГО JS ТОЖЕ НЕ ХВАТАЛО (для toggler/collapse) -->
+<!-- Bootstrap JS bundle (required for navbar toggler/collapse) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
