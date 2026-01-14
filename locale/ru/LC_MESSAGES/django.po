@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 14:31+0300\n"
+"POT-Creation-Date: 2026-01-14 15:00+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,11 +65,11 @@ msgid "Student ID (9 digits)"
 msgstr "Номер студента:"
 
 #: .\core\forms.py:80 .\core\templates\core\dashboard.html:55
-#: .\core\templates\core\dashboard.html:89
+#: .\core\templates\core\dashboard.html:90
 msgid "Category"
 msgstr "Категория"
 
-#: .\core\forms.py:81 .\core\templates\core\dashboard.html:90
+#: .\core\forms.py:81 .\core\templates\core\dashboard.html:91
 msgid "Weight (kg)"
 msgstr "Вес (кг)"
 
@@ -201,22 +201,22 @@ msgstr "Всего (кг)"
 msgid "Eco-score"
 msgstr "Экологический балл:"
 
-#: .\core\templates\core\dashboard.html:68
-#: .\core\templates\core\dashboard.html:101
+#: .\core\templates\core\dashboard.html:69
+#: .\core\templates\core\dashboard.html:102
 msgid "No records yet"
 msgstr "Пока нет записей"
 
-#: .\core\templates\core\dashboard.html:74
+#: .\core\templates\core\dashboard.html:75
 msgid "These impact numbers are demonstration values (educational project)."
 msgstr ""
 "Эти показатели воздействия являются демонстрационными значениями "
 "(образовательный проект)."
 
-#: .\core\templates\core\dashboard.html:83
+#: .\core\templates\core\dashboard.html:84
 msgid "Last records"
 msgstr "Последние записи"
 
-#: .\core\templates\core\dashboard.html:88
+#: .\core\templates\core\dashboard.html:89
 msgid "Date"
 msgstr "Дата"
 

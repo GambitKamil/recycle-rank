@@ -62,14 +62,23 @@ def dashboard_view(request):
     )
 
     # eco-score считаем на Python (потому что коэффициенты разные)
+    # Мапа: code -> переводимый label (lazy)
+    choices_map = dict(WasteEntry.CATEGORY_CHOICES)
+
     eco_score = 0
     per_cat = []
     for row in by_cat:
-        cat = row["category"]
+        cat = row["category"]  # например "paper"
         kg = row["total"] or 0
         score = kg * coef(cat)
         eco_score += score
-        per_cat.append({"category": cat, "kg": kg, "score": score})
+
+        per_cat.append({
+            "category": cat,
+            "category_label": choices_map.get(cat, cat),  # будет "Paper/Kağıt/Бумага"
+            "kg": kg,
+            "score": score
+        })
 
     # Условный эффект
     from decimal import Decimal
