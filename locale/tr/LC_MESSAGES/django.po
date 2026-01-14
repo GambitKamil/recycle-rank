@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 12:55+0300\n"
+"POT-Creation-Date: 2026-01-14 13:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: .\core\forms.py:32 .\core\forms.py:66
+#, fuzzy
+#| msgid "Student ID:"
+msgid "Student ID"
+msgstr "Öğrenci NO:"
+
+#: .\core\forms.py:33 .\core\templates\core\leaderboard_faculties.html:19
+msgid "Faculty"
+msgstr "Fakülte"
+
+#: .\core\forms.py:34 .\core\forms.py:72
+msgid "Password"
+msgstr "Şifre"
+
+#: .\core\forms.py:35
+msgid "Repeat password"
+msgstr "Şifre tekrarla"
+
+#: .\core\forms.py:42
+msgid "9 digits"
+msgstr "9 rakam"
+
+#: .\core\forms.py:43
+msgid "Create a password"
+msgstr "Şifre oluştur"
+
+#: .\core\forms.py:44
+msgid "Repeat the password"
+msgstr "Şifreyi tekrar girin"
+
+#: .\core\forms.py:49
+msgid "Student ID must be exactly 9 digits."
+msgstr "Öğrenci NO tam olarak 9 haneli olmalıdır."
+
+#: .\core\forms.py:57
+msgid "Passwords do not match."
+msgstr "Şifreler eşleşmiyor."
+
+#: .\core\forms.py:71
+#, fuzzy
+#| msgid "Student ID:"
+msgid "Student ID (9 digits)"
+msgstr "Öğrenci NO:"
+
+#: .\core\forms.py:80 .\core\templates\core\dashboard.html:55
+#: .\core\templates\core\dashboard.html:89
+msgid "Category"
+msgstr "Kategori"
+
+#: .\core\forms.py:81 .\core\templates\core\dashboard.html:90
+msgid "Weight (kg)"
+msgstr "Ağırlık (kg)"
+
+#: .\core\forms.py:87
+msgid "e.g., 1.5"
+msgstr "ö.g., 1,5"
+
+#: .\core\forms.py:92
+msgid "Weight must be between 0.10 and 50.00 kg."
+msgstr "Ağırlık 0,10 ile 50,00 kg arasında olmalıdır."
+
 #: .\core\templates\core\add_entry.html:9
 msgid "Add sorting record"
 msgstr "Sıralama kaydı ekle"
 
-#: .\core\templates\core\add_entry.html:14
+#: .\core\templates\core\add_entry.html:27
 msgid "Save"
 msgstr "Kaydet"
 
-#: .\core\templates\core\add_entry.html:18
+#: .\core\templates\core\add_entry.html:32
 msgid "Back to dashboard"
 msgstr "Kontrol paneline geri dön"
 
@@ -52,11 +113,11 @@ msgid "Logout"
 msgstr "Çıkış"
 
 #: .\core\templates\core\base.html:30 .\core\templates\core\login.html:9
-#: .\core\templates\core\login.html:14
+#: .\core\templates\core\login.html:27
 msgid "Login"
 msgstr "Giriş"
 
-#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:19
+#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:33
 #: .\core\templates\core\register.html:9
 msgid "Register"
 msgstr "Kayıt Ol"
@@ -101,11 +162,6 @@ msgstr "Enerji tasarrufu (demo):"
 msgid "By category"
 msgstr "Kategorilere göre"
 
-#: .\core\templates\core\dashboard.html:55
-#: .\core\templates\core\dashboard.html:89
-msgid "Category"
-msgstr "Kategori"
-
 #: .\core\templates\core\dashboard.html:56
 #: .\core\templates\core\leaderboard_faculties.html:20
 #: .\core\templates\core\leaderboard_students.html:20
@@ -135,10 +191,6 @@ msgstr "Son kayıtlar"
 msgid "Date"
 msgstr "Tarih"
 
-#: .\core\templates\core\dashboard.html:90
-msgid "Weight (kg)"
-msgstr "Ağırlık (kg)"
-
 #: .\core\templates\core\leaderboard_faculties.html:7
 msgid "Faculty leaderboard"
 msgstr "Fakülte sıralamsı"
@@ -146,10 +198,6 @@ msgstr "Fakülte sıralamsı"
 #: .\core\templates\core\leaderboard_faculties.html:8
 msgid "Top faculties by total recycling results."
 msgstr "Toplam geri dönüşüm sonuçlarına göre en iyi fakülteler"
-
-#: .\core\templates\core\leaderboard_faculties.html:19
-msgid "Faculty"
-msgstr "Fakülte"
 
 #: .\core\templates\core\leaderboard_faculties.html:36
 #: .\core\templates\core\leaderboard_students.html:36
@@ -168,15 +216,15 @@ msgstr "Eko puan ve toplam kg'ye göre en iyi öğrenciler."
 msgid "Student"
 msgstr "Öğrenci"
 
-#: .\core\templates\core\login.html:18
+#: .\core\templates\core\login.html:32
 msgid "No account?"
 msgstr "Hesabın yok mu?"
 
-#: .\core\templates\core\register.html:14
+#: .\core\templates\core\register.html:27
 msgid "Create account"
 msgstr "Hesap oluştur"
 
-#: .\core\templates\core\register.html:18
+#: .\core\templates\core\register.html:32
 msgid "Back to login"
 msgstr "Giriş sayfasına dön"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 12:55+0300\n"
+"POT-Creation-Date: 2026-01-14 13:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,15 +20,76 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: .\core\forms.py:32 .\core\forms.py:66
+#, fuzzy
+#| msgid "Student ID:"
+msgid "Student ID"
+msgstr "Номер студента:"
+
+#: .\core\forms.py:33 .\core\templates\core\leaderboard_faculties.html:19
+msgid "Faculty"
+msgstr "Факультет"
+
+#: .\core\forms.py:34 .\core\forms.py:72
+msgid "Password"
+msgstr "Пароль"
+
+#: .\core\forms.py:35
+msgid "Repeat password"
+msgstr "Повторите пароль"
+
+#: .\core\forms.py:42
+msgid "9 digits"
+msgstr "9 цифр"
+
+#: .\core\forms.py:43
+msgid "Create a password"
+msgstr "Создать пароль"
+
+#: .\core\forms.py:44
+msgid "Repeat the password"
+msgstr "Повторите пароль"
+
+#: .\core\forms.py:49
+msgid "Student ID must be exactly 9 digits."
+msgstr "Идентификационный номер студента должен состоять ровно из 9 цифр."
+
+#: .\core\forms.py:57
+msgid "Passwords do not match."
+msgstr "Пароли не совпадают."
+
+#: .\core\forms.py:71
+#, fuzzy
+#| msgid "Student ID:"
+msgid "Student ID (9 digits)"
+msgstr "Номер студента:"
+
+#: .\core\forms.py:80 .\core\templates\core\dashboard.html:55
+#: .\core\templates\core\dashboard.html:89
+msgid "Category"
+msgstr "Категория"
+
+#: .\core\forms.py:81 .\core\templates\core\dashboard.html:90
+msgid "Weight (kg)"
+msgstr "Вес (кг)"
+
+#: .\core\forms.py:87
+msgid "e.g., 1.5"
+msgstr "например, 1,5"
+
+#: .\core\forms.py:92
+msgid "Weight must be between 0.10 and 50.00 kg."
+msgstr "Вес должен быть от 0,10 до 50,00 кг."
+
 #: .\core\templates\core\add_entry.html:9
 msgid "Add sorting record"
 msgstr "Добавить запись сортировки"
 
-#: .\core\templates\core\add_entry.html:14
+#: .\core\templates\core\add_entry.html:27
 msgid "Save"
 msgstr "Сохранить"
 
-#: .\core\templates\core\add_entry.html:18
+#: .\core\templates\core\add_entry.html:32
 msgid "Back to dashboard"
 msgstr "Вернуться к панели управления"
 
@@ -54,11 +115,11 @@ msgid "Logout"
 msgstr "Выйти"
 
 #: .\core\templates\core\base.html:30 .\core\templates\core\login.html:9
-#: .\core\templates\core\login.html:14
+#: .\core\templates\core\login.html:27
 msgid "Login"
 msgstr "Войти"
 
-#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:19
+#: .\core\templates\core\base.html:31 .\core\templates\core\login.html:33
 #: .\core\templates\core\register.html:9
 msgid "Register"
 msgstr "Регистрация"
@@ -103,11 +164,6 @@ msgstr "Энергосбережение "
 msgid "By category"
 msgstr "По категории"
 
-#: .\core\templates\core\dashboard.html:55
-#: .\core\templates\core\dashboard.html:89
-msgid "Category"
-msgstr "Категория"
-
 #: .\core\templates\core\dashboard.html:56
 #: .\core\templates\core\leaderboard_faculties.html:20
 #: .\core\templates\core\leaderboard_students.html:20
@@ -127,7 +183,9 @@ msgstr "Пока нет записей"
 
 #: .\core\templates\core\dashboard.html:74
 msgid "These impact numbers are demonstration values (educational project)."
-msgstr "Эти показатели воздействия являются демонстрационными значениями (образовательный проект)."
+msgstr ""
+"Эти показатели воздействия являются демонстрационными значениями "
+"(образовательный проект)."
 
 #: .\core\templates\core\dashboard.html:83
 msgid "Last records"
@@ -137,10 +195,6 @@ msgstr "Последние записи"
 msgid "Date"
 msgstr "Дата"
 
-#: .\core\templates\core\dashboard.html:90
-msgid "Weight (kg)"
-msgstr "Вес (кг)"
-
 #: .\core\templates\core\leaderboard_faculties.html:7
 msgid "Faculty leaderboard"
 msgstr "Рейтинг факультетов"
@@ -148,10 +202,6 @@ msgstr "Рейтинг факультетов"
 #: .\core\templates\core\leaderboard_faculties.html:8
 msgid "Top faculties by total recycling results."
 msgstr "Лучшие факультеты по общим результатам переработки отходов."
-
-#: .\core\templates\core\leaderboard_faculties.html:19
-msgid "Faculty"
-msgstr "Факультет"
 
 #: .\core\templates\core\leaderboard_faculties.html:36
 #: .\core\templates\core\leaderboard_students.html:36
@@ -170,14 +220,14 @@ msgstr "Лучшие студенты по общим результатам п�
 msgid "Student"
 msgstr "Студент"
 
-#: .\core\templates\core\login.html:18
+#: .\core\templates\core\login.html:32
 msgid "No account?"
 msgstr "Нет аккаунта?"
 
-#: .\core\templates\core\register.html:14
+#: .\core\templates\core\register.html:27
 msgid "Create account"
 msgstr "Создать аккаунт"
 
-#: .\core\templates\core\register.html:18
+#: .\core\templates\core\register.html:32
 msgid "Back to login"
 msgstr "Вернуться к входу"
