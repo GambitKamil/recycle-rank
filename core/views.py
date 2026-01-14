@@ -13,7 +13,12 @@ from .models import Faculty
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.utils.translation import gettext as _
-
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.utils.translation import gettext as _
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
 
 from .forms import RegisterForm, WasteEntryForm
 from .models import Profile, WasteEntry
@@ -49,6 +54,7 @@ def register_view(request):
 
 @login_required
 def dashboard_view(request):
+
     profile = Profile.objects.select_related("faculty").get(user=request.user)
 
     qs = WasteEntry.objects.filter(user=request.user)
@@ -88,9 +94,7 @@ def dashboard_view(request):
     co2_saved = eco_score * Decimal("0.8")
     energy_saved = eco_score * Decimal("1.2")
 
-    # История (последние 20)
     entries = qs.order_by("-created_at")[:20]
-
     return render(
         request,
         "core/dashboard.html",
@@ -190,6 +194,4 @@ def leaderboard_faculties_view(request):
         "core/leaderboard_faculties.html",
         {"rows": data},
     )
-
-
 

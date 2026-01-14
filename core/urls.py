@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from .views import register_view, dashboard_view, add_entry_view
 from django.views.generic import RedirectView
-
+from core import views
 from .forms import StudentLoginForm
 from .views import register_view, dashboard_view
 from .views import (
@@ -29,5 +29,4 @@ urlpatterns = [
     path("add/", add_entry_view, name="add_entry"),
     path("leaderboard/", leaderboard_students_view, name="leaderboard_students"),
     path("faculties/", leaderboard_faculties_view, name="leaderboard_faculties"),
-
 ]

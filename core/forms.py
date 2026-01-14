@@ -3,11 +3,16 @@ from decimal import Decimal
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import User
-
+from django import forms
+from .models import Profile
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import gettext_lazy as _
+from decimal import Decimal
+from django import forms
+from django.utils.translation import gettext_lazy as _
 
+from .models import Profile
 from .models import Faculty, WasteEntry
 
 
@@ -99,3 +104,6 @@ class WasteEntryForm(BootstrapMixin, forms.ModelForm):
         if w < Decimal("0.10") or w > Decimal("50.00"):
             raise forms.ValidationError(_("Weight must be between 0.10 and 50.00 kg."))
         return w
+
+
+

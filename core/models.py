@@ -4,8 +4,11 @@ from django.db import models
 from django.conf import settings
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
-
+from decimal import Decimal
+from django.db import models
+from django.contrib.auth.models import User
+from django.db import models
+from django.contrib.auth.models import User
 
 class Faculty(models.Model):
     name = models.CharField(max_length=120, unique=True)
@@ -18,6 +21,7 @@ class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     student_id = models.CharField(max_length=32, unique=True)
     faculty = models.ForeignKey(Faculty, on_delete=models.PROTECT, related_name="students")
+
 
     def __str__(self) -> str:
         return f"{self.student_id} ({self.user.username})"
@@ -44,3 +48,5 @@ class WasteEntry(models.Model):
 
     def __str__(self) -> str:
         return f"{self.user.username}: {self.category} {self.weight_kg} kg"
+
+
